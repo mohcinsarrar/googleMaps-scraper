@@ -4,8 +4,7 @@
   <img src="./images/gmapscraper.png">
 </div>
 
-This Google Maps Scraper will enable you to get data from Google Places, the scraper built with Python and library <a href="https://www.selenium.dev"
-  >Selenium</a>
+This Google Maps Scraper will enable you to get data from Google Places, the scraper built with Python and library <a href="https://www.selenium.dev">Selenium</a>
   <br>
 This scraper enables you to extract all of the following data from Google Maps:
 - place title and image
