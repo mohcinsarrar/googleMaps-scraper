@@ -40,15 +40,6 @@ The scraper also supports the scraping of all detailed information about reviews
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-### Scrape product infos
-to start scraping products from an amazon category, go to the project directory, and use this command
-  ```sh
-     scrapy crawl product -a category="URL" -O outputFile.csv
-  ```
-- outputFile.csv to save the products infos
-- the URL is the link of the category page
-<img src="./images/category.png">
-
 ### Scrape places
 you can scrape places for a specific search query, Example : "restaurant in new york", to start scraping execute this command in the directory of the file main.py :
   ```sh
