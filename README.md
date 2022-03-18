@@ -1,21 +1,39 @@
 <div id="top"></div>
 <div align="center">
   <h1 align="center">Google Maps Scraper</h1>
+  <img src="./images/gmapscraper.png">
 </div>
 
-is a simple and functional solution to extract data from Amazon.com. The program carefully processes the pages from the Amazon website, saving their data on your computer, with this program you can get amazon product infos, product reviews ...
-<br>This program built with the python framework <a href="https://scrapy.org/">Scrapy</a>.
+This Google Maps Scraper will enable you to get data from Google Places, the scraper built with Python and library <a href="https://www.selenium.dev"
+  >Selenium</a>
+  <br>
+This scraper enables you to extract all of the following data from Google Maps:
+- place title and image
+- Address
+- Phone and website if available
+- Average rating and review count
+- Opening hours
+- Popular times 
+
+The scraper also supports the scraping of all detailed information about reviews:
+- Review text
+- Stars
+- Published date
+- Reviewer name
+- Reviewer number of reviews
+- Reviewer is Local Guide
+
 
 <!-- GETTING STARTED -->
 ## Installation
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/mohcinsarrar/amazon-scraper.git
+   git clone https://github.com/mohcinsarrar/googleMaps-scraper.git
    ```
-2. Install Scrapy
+2. Install requirements
    ```sh
-   pip install scrapy
+   pip install -r requirements.txt
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -32,15 +50,16 @@ to start scraping products from an amazon category, go to the project directory,
 - the URL is the link of the category page
 <img src="./images/category.png">
 
-### Scrape product reviews
-you can scrape reviews for one or many products using the command
+### Scrape places
+you can scrape places for a specific search query, Example : "restaurant in new york", to start scraping execute this command in the directory of the file main.py :
   ```sh
-     scrapy crawl review -a product="ASIN" -a products="path_to_csv_file_of_asin" -a maxpages=nbr -O outputFile.csv
+     python main.py -q "search query" -l maxPlaces -r
   ```
-(use one of product or products arg)
-- if you want to scrape one product use product arg eqal to asin
-- if you want to scrape many products use a csv file (like in amazon/asin.csv)
-- maxpages: is the max number of pages you want to srape for each product
-- outputFile.csv to save the products reviews
+
+- -q search query : Example : "restaurant in new york"
+- -l maxPlaces : max places to be scraped
+- the option -r : to activate scraping of reviews
+- -O outputFile.csv to save places data
+- -o outputFile.csv to save reviews data
 
 <p align="right">(<a href="#top">back to top</a>)</p>
