@@ -42,14 +42,16 @@ The scraper also supports the scraping of all detailed information about reviews
 
 ### Scrape places
 you can scrape places for a specific search query, Example : "restaurant in new york", to start scraping execute this command in the directory of the file main.py :
+python main.py -q "rest in new york" -l 2 -pf "dd.csv" -r -rf "ff.csv" -rl 2
   ```sh
-     python main.py -q "search query" -l maxPlaces -r
+     python main.py -r -q "search query" -l maxPlaces -rl maxReviews -pf "outputFile.csv" -rf "outputFile.csv"
   ```
 
-- -q search query : Example : "restaurant in new york"
+- -r : option to activate scraping reviews (Default : deactivate)
+- -q "search query" : Example : -q "restaurant in new york"
 - -l maxPlaces : max places to be scraped
-- the option -r : to activate scraping of reviews
-- -O outputFile.csv to save places data
-- -o outputFile.csv to save reviews data
+- -rl maxReviews : max reviews to be scraped
+- -pf "outputFile.csv" : path to output file to save places data
+- -rf "outputFile.csv" : path to output file to save reviews data
 
 <p align="right">(<a href="#top">back to top</a>)</p>
